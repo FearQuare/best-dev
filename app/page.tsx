@@ -30,7 +30,7 @@ export default function Home() {
     setInputColor('#283618'); // Change color to blue when typing
   };
 
-  const handleKeyDown = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     let isValid = false;
     if (event.key === 'Enter') {
       names.forEach((name) => {
