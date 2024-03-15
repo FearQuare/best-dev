@@ -25,12 +25,12 @@ export default function Home() {
     loadNames();
   }, []);
 
-  const handleChange = (event) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEntry(event.target.value);
     setInputColor('#283618'); // Change color to blue when typing
   };
 
-  const handleKeyDown = (event) => {
+  const handleKeyDown = (event: React.ChangeEvent<HTMLInputElement>) => {
     let isValid = false;
     if (event.key === 'Enter') {
       names.forEach((name) => {
