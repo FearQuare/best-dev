@@ -36,7 +36,7 @@ export default function Home() {
         if(entry === name){
           isValid = true;
           if(name === "Satsuki Shiga"){
-            setParagraphText(`${name} is not a developer but a WONDERFUL WIFE.`);
+            setParagraphText(`${name} is not a developer but a WONDERFUL PERSON.`);
           }else{
             setParagraphText(`${name} is one of the greatest developers.`);
           }
