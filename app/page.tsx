@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useEffect, useState } from 'react';
 import { TextField } from '@mui/material';
 import { fetchValidNames }  from './lib/data';
@@ -16,10 +17,8 @@ export default function Home() {
          setNames(fetchedNames);
        } catch (error) {
          console.error('Error loading names:', error);
-         // Optionally, update the UI to reflect the error
          setParagraphText('Error loading names, please try again later.');
        }
-      const fetchedNames = await fetchValidNames();
     };
   
     loadNames();
@@ -27,7 +26,7 @@ export default function Home() {
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEntry(event.target.value);
-    setInputColor('#283618'); // Change color to blue when typing
+    setInputColor('#283618');
   };
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
